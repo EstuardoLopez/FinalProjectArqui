@@ -17,5 +17,21 @@
 
 
 <ion-content padding>
-
+  <ion-refresher (ionRefresh)="doRefresh($event);">
+    <ion-refresher-content
+      pullingText="Recargar"
+      pullingIcon="arrow-dropdown"
+      refreshingSpinner="circles"
+      refreshingText="Recargando"
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <ion-card-header>
+      Temperatura ambiente &#186;C
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #divTemperatura></canvas>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
